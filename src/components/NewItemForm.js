@@ -15,6 +15,10 @@ export default function NewItemForm(props) {
       return;
     }
 
+    if (titleInputRef.current.value.trim().length > 0) {
+      setIsValid(true);
+    }
+
     const enteredTodoTitle = titleInputRef.current.value;
 
     // Making a todo item from the form info
@@ -33,7 +37,7 @@ export default function NewItemForm(props) {
 
   return (
     <form noValidate onSubmit={onSubmitHandler}>
-      <div className={classes.control}>
+      <div className={!isValid ? classes.controlInvalid : classes.control}>
         <label>Todo Name: </label>
         <input type="text" required id="title" ref={titleInputRef} />
       </div>

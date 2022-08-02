@@ -1,11 +1,4 @@
-.invalidBody {
-  color: red;
-}
-
-.validBody {
-  color: white;
-}
-
+/* Standard Form Formatting */
 .control {
   margin-bottom: 0.5rem;
 }
@@ -13,9 +6,8 @@
 .control label {
   display: block;
   font-weight: bold;
-  font-size: large;
+  font-size: x-large;
   padding-bottom: 2%;
-
 }
 
 .control input,
@@ -30,6 +22,32 @@
   width: 90%;
 }
 
+/* No Text Entered */
+.controlInvalid {
+  margin-bottom: 0.5rem;
+}
+
+.controlInvalid label {
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  padding-bottom: 2%;
+}
+
+.controlInvalid input,
+.controlInvalid textarea {
+  display: block;
+  font: inherit;
+  border-radius: 4px;
+  border: 1px solid #ef233c;
+  padding: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: salmon;
+}
+
+/* Button Formatting */
 .actions {
   margin-top: 1rem;
   text-align: center;
