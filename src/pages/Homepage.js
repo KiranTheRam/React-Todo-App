@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import TodoList from "../components/TodoList";
 import NewItemForm from "../components/NewItemForm";
 import Card from "../ui/Card";
-import classes from './Homepage.module.css'
-
+import classes from "./Homepage.module.css";
 
 const DUMMY_DATA = [
   {
@@ -31,10 +30,8 @@ export default function Homepage() {
     });
   };
 
-
-  // Receives the title of the todo, then filters the array to only have elements NOT equal to that name 
+  // Receives the title of the todo, then filters the array to only have elements NOT equal to that name
   const todoDeletionhandler = (todo) => {
-
     setTodos((prevTodos) => {
       return [...prevTodos.filter((item) => item.id !== todo)];
       // return [...prevTodos.filter((item) => item.id !== todo)];
@@ -43,17 +40,22 @@ export default function Homepage() {
 
   return (
     <div>
-      <div className={classes.heading}>
-        <h1>Your Todos</h1>
-      </div>
-      <div>
+      <div className={classes.todoForm}>
+
+        <div className={classes.heading}>
+          <h1>Your Todos</h1>
+        </div>
+
         <Card>
           <NewItemForm onAddTodo={addTodoHandler} />
         </Card>
+
       </div>
-      <div>
+
+      <div className={classes.todoList}>
         <TodoList items={todos} deleteFromArray={todoDeletionhandler} />
       </div>
+      
     </div>
   );
 }

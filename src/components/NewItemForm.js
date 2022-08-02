@@ -1,12 +1,19 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { v4 as uuid } from "uuid";
+import classes from "./NewItemForm.module.css";
 
 export default function NewItemForm(props) {
+  const [isValid, setIsValid] = useState(true);
   const titleInputRef = useRef();
   const unique_id = uuid();
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
+
+    if (titleInputRef.current.value.trim().length === 0) {
+      setIsValid(false);
+      return;
+    }
 
     const enteredTodoTitle = titleInputRef.current.value;
 
@@ -25,12 +32,12 @@ export default function NewItemForm(props) {
   };
 
   return (
-    <form onSubmit={onSubmitHandler}>
-      <div>
-        <label>Title</label>
+    <form noValidate onSubmit={onSubmitHandler}>
+      <div className={classes.control}>
+        <label>Todo Name: </label>
         <input type="text" required id="title" ref={titleInputRef} />
       </div>
-      <div>
+      <div className={classes.actions}>
         <button type="submit">Submit</button>
       </div>
     </form>

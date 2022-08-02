@@ -1,3 +1,16 @@
 .heading {
-    color: #ecbeb4;
+    color: #fcbf49;
+    font-size: x-large;
+}
+
+.todoForm {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.todoList {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }

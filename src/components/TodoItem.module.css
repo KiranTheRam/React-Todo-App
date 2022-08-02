@@ -1,7 +1,33 @@
 .item {
-    /* padding-bottom: 10px; */
-    color: white;
-    font-size: x-large;
-    margin: 1rem 0;
-    align-content: center;
+  /* padding-bottom: 10px; */
+  color: white;
+  align-content: center;
+  margin: 15px;
+}
+
+.todoName {
+  font-size: x-large;
+}
+
+.actions {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: medium;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #003049;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #003049;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #ef233c;
+  border-color: #ef233c;
 }
