@@ -37,7 +37,9 @@ export default function NewItemForm(props) {
 
   return (
     <form noValidate onSubmit={onSubmitHandler}>
-      <div className={!isValid ? classes.controlInvalid : classes.control}>
+      <div
+        className={`${classes.control} ${!isValid && classes.controlInvalid}`}
+      >
         <label>Todo Name: </label>
         <input type="text" required id="title" ref={titleInputRef} />
       </div>

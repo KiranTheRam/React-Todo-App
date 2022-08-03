@@ -10,8 +10,7 @@
   padding-bottom: 2%;
 }
 
-.control input,
-.control textarea {
+.control input {
   display: block;
   font: inherit;
   border-radius: 4px;
@@ -23,27 +22,8 @@
 }
 
 /* No Text Entered */
-.controlInvalid {
-  margin-bottom: 0.5rem;
-}
-
-.controlInvalid label {
-  display: block;
-  font-weight: bold;
-  font-size: x-large;
-  padding-bottom: 2%;
-}
-
-.controlInvalid input,
-.controlInvalid textarea {
-  display: block;
-  font: inherit;
-  border-radius: 4px;
+.controlInvalid input {
   border: 1px solid #ef233c;
-  padding: 0.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
   background-color: salmon;
 }
 
